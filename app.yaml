@@ -1,0 +1,14 @@
+application: willnetwillnet
+version: 1
+runtime: python
+api_version: 1
+handlers:
+- url: /
+  static_files: index.html
+  upload: index.html
+- url: /(.*\.py)
+  script: \1
+- url: /(.*)
+  static_files: \1
+  upload: /(.*)
+
