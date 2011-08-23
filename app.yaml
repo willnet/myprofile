@@ -6,9 +6,18 @@ handlers:
 - url: /
   static_files: index.html
   upload: index.html
+- url: /images
+  static_dir: images
+- url: /css
+  static_dir: css
 - url: /(.*\.py)
   script: \1
 - url: /(.*)
   static_files: \1
   upload: /(.*)
+- url: /favicon.ico
+  static_files: images/favicon.ico
+  upload: images/favicon.ico
+  mime_type: image/x-icon
+
 
